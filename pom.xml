@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.5.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.marnat.sitb</groupId>
+	<artifactId>sitb</artifactId>
+	<version>_ver3</version>
+	<name>sitb</name>
+	<description>SITB TF IDF and Sentiment Analysis</description>
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- My SQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-core -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+            <version>8.3.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-analyzers-common -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-analyzers-common</artifactId>
+            <version>8.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-queryparser</artifactId>
+            <version>8.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-test-framework</artifactId>
+            <version>8.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-codecs</artifactId>
+            <version>8.3.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-expressions -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-expressions</artifactId>
+            <version>8.3.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-suggest -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-suggest</artifactId>
+            <version>8.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-misc</artifactId>
+            <version>8.3.0</version>
+        </dependency>
+
+		<!-- https://github.com/masasdani/sengon {Sentiment Analysis} -->
+		<dependency>
+	        <groupId>com.masasdani</groupId>
+	        <artifactId>sengon</artifactId>
+	        <version>0.0.1</version>
+	    </dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

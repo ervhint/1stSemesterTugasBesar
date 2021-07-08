@@ -1,0 +1,53 @@
+Untuk mengambil Tf Idf:
+url: 54.226.97.74:8080/doTfIdf
+contoh parameter:
+[												
+	{"tweet_text" : "paling nyiksa emang flu sih ditambah batuk dah byeee"},
+    {"tweet_text" : "akhirnya saya sembuh tuberkulosis"}
+]
+return dari api (diambil hanya beberapa):
+[
+    {
+        "term": "paling",
+        "document": "Doc_1.txt",
+        "score": 1.0
+    }
+]
+
+Untuk mengambil Sentimen secara satuan:
+url: 54.226.97.74:8080/doSentiment
+contoh parameter:
+{
+    "id" : 555555,
+    "tweet_text" : "paling nyiksa emang flu sih ditambah batuk dah byeee"
+}
+return dari api:
+{
+    "id": 555555,
+    "sentiment": "NEUTRAL"
+}
+
+Untuk mengambil Sentimen secara bulk:
+url: 54.226.97.74:8080/doSentiments
+contoh parameter:
+[
+    {
+        "id" : 555555,
+        "tweet_text" : "paling nyiksa emang flu sih ditambah batuk dah byeee"
+    },
+    {
+        "id" : 555556,
+        "tweet_text" : "akhirnya saya sembuh tuberkulosis"
+    }
+]
+return dari api:
+[
+    {
+        "id": 555555,
+        "sentiment": "NEUTRAL"
+    },
+    {
+        "id": 555556,
+        "sentiment": "POSITIVE"
+    }
+]
